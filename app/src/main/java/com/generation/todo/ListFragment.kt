@@ -31,34 +31,6 @@ class ListFragment : Fragment() {
         )
 
 
-        //Gerando a listagem de tarefas com base na classe de modelo
-        val listTarefas = mutableListOf(
-            Tarefa(
-                "Limpar a Casa",
-                "Iniciar na parte da manhã",
-                "Henrique",
-                "2022-21-03",
-                true,
-                "Dia a Dia"
-            ),
-            Tarefa(
-                "Lavar a Louça",
-                "Do dia todo :^)",
-                "Henrique",
-                "2022-22-03",
-                false,
-                "Dia a Dia"
-            ),
-            Tarefa(
-                "Ir ao Parque",
-                "Me encontrar com o pessoal no metrô",
-                "Henrique",
-                "2022-26-03",
-                false,
-                "Lazer"
-            )
-        )
-
         //Configurar o Adapter
 
         //Instaciar o adapter
@@ -72,9 +44,6 @@ class ListFragment : Fragment() {
 
         //Definir a lista para ter um tamanho fixo indepedente dos itens
         binding.recyclerTarefa.setHasFixedSize(true)
-
-        //Definindo quais vão ser os dados da lista
-        adapter.setLista(listTarefas)
 
         //Navegação para o Fragment de Form
         binding.floatingAdd.setOnClickListener {
